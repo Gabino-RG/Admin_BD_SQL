@@ -1,0 +1,7 @@
+flet==0.25.2
+flet-web==0.25.2
+flet-desktop==0.25.2
+mariadb
+matplotlib
+plotly
+kaleido
