@@ -8,6 +8,31 @@ Mstar es una herramienta visual, moderna y poderosa para administrar servidores 
 
 ## 🚀 Características Principales
 
+## 🛡️ Seguridad y Control de Acceso (RBAC)
+
+A diferencia de los administradores de bases de datos convencionales, **Mstar** implementa un modelo de **Control de Acceso Basado en Roles (RBAC)** vinculado directamente al motor de MariaDB.
+
+### ¿Cómo funciona el RBAC en Mstar?
+El sistema no utiliza una tabla de usuarios interna; en su lugar, utiliza los **Privilegios Nativos de MariaDB** (`GRANT` / `REVOKE`). Al iniciar sesión, el sistema analiza dinámicamente los permisos del usuario mediante `SHOW GRANTS` y muta la interfaz de usuario:
+
+1.  **Acceso Total (Admin):** Visualización de todas las bases de datos, gestión completa de usuarios (creación/borrado) y gestión de respaldos.
+2.  **Solo Respaldos:** Acceso restringido únicamente a la generación de archivos `.sql` (Dump).
+3.  **Solo Lectura:** Interfaz limitada exclusivamente a la visualización de métricas de rendimiento y gráficas de datos.
+
+---
+
+## 🚀 Guía de Inicio Rápido
+
+### Requisitos Previos
+* Tener instalado y activo un servidor **MariaDB** (o MySQL a través de XAMPP/WAMP) en el puerto `3306`.
+* Contar con un usuario con privilegios administrativos para la configuración inicial.
+
+### Primera Conexión (Modo Maestro)
+Para configurar tus primeros usuarios y ver el potencial completo de la herramienta, inicia sesión de la siguiente manera:
+1.  **Usuario:** `root`
+2.  **Contraseña:** *(La contraseña que configuraste en tu instalación local de MariaDB/XAMPP. Si usas XAMPP por defecto, déjala en blanco).*
+3.  **Servidor:** `127.0.0.1`
+
 ### 🏠 Dashboard Inteligente
 
 Monitorea en tiempo real el estado de tu servidor:
