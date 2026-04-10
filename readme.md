@@ -1,8 +1,8 @@
-# 📊 MariaDB Admin Panel
+# 📊 Mstar - MariaDB Admin Panel
 
 ### *Gestor Integral de Bases de Datos MariaDB*
 
-Una herramienta visual, moderna y poderosa para administrar servidores **MariaDB**, construida con **Python** y **Flet**. Diseñada para transformar tareas complejas en acciones simples con una interfaz limpia e interactiva.
+Mstar es una herramienta visual, moderna y poderosa para administrar servidores **MariaDB**, construida con **Python** y **Flet**. Diseñada para transformar tareas complejas en acciones simples con una interfaz limpia e interactiva.
 
 ---
 
@@ -119,12 +119,6 @@ Esto asegura que comandos como `mysqldump` y `mysql` funcionen correctamente des
 
 ---
 
-## 🖥️ Vista Previa
-
-> ✨ Aquí puedes agregar capturas de tu dashboard, gráficas o consola SQL para mostrar el potencial visual de la herramienta.
-
----
-
 ## 📂 Estructura del Proyecto
 
 ```text
@@ -144,7 +138,7 @@ Esto asegura que comandos como `mysqldump` y `mysql` funcionen correctamente des
 
 ## 👨‍💻 Autor
 
-**Gabino**
+**Gabino Reyes**
 🎓 8vo Cuatrimestre - UTSJR
 
 ---

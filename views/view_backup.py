@@ -1,10 +1,11 @@
 import flet as ft
 import subprocess
+import db_config
 from db_config import obtener_bases_datos
 
 def backup_view(page: ft.Page):
-    DB_USER = "root"
-    DB_PASS = "Mstar"
+    usuario_actual = db_config.CURRENT_DB_USER
+    pass_actual = db_config.CURRENT_DB_PASS
 
     # --- 1. Estilizado de Componentes ---
     lista_dbs = obtener_bases_datos()
@@ -47,7 +48,7 @@ def backup_view(page: ft.Page):
 
             try:
                 mostrar_mensaje(f"⏳ Procesando respaldo de {db_seleccionada}...", ft.colors.BLUE_200)
-                cmd = f'mysqldump -u {DB_USER} -p{DB_PASS} {db_seleccionada} > "{e.path}"'
+                cmd = f'mysqldump -u {usuario_actual} -p{pass_actual} {db_seleccionada} > "{e.path}"'
                 subprocess.run(cmd, shell=True, check=True)
                 mostrar_mensaje("✅ Respaldo generado con éxito.", ft.colors.GREEN_400)
             except Exception as err:
@@ -63,7 +64,7 @@ def backup_view(page: ft.Page):
 
             try:
                 mostrar_mensaje("🚀 Restaurando base de datos...", ft.colors.BLUE_200)
-                cmd = f'mysql -u {DB_USER} -p{DB_PASS} {db_seleccionada} < "{e.files[0].path}"'
+                cmd = f'mysql -u {usuario_actual} -p{pass_actual} {db_seleccionada} < "{e.files[0].path}"'
                 subprocess.run(cmd, shell=True, check=True)
                 mostrar_mensaje("✅ Importación completada correctamente.", ft.colors.GREEN_400)
             except Exception as err:
