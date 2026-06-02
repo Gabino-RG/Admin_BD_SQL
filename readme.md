@@ -163,8 +163,8 @@ Esto asegura que comandos como `mysqldump` y `mysql` funcionen correctamente des
 
 ## 👨‍💻 Autor
 
-**Gabino Reyes**
-🎓 8vo Cuatrimestre - UTSJR
+**Team SnackUp**
+🎓 9vo Cuatrimestre - UTSJR
 
 ---
 
