@@ -14,7 +14,7 @@ def main(page: ft.Page):
     page.title = "Mstar - MariaDB Manager"
     page.theme_mode = ft.ThemeMode.DARK
     page.window.width = 1100
-    page.window.height = 750
+    page.window.height = 850
     page.padding = 0
 
     # =========================================================================
